@@ -2,7 +2,7 @@ def likes(names):
     if len(names) == 0:
         return f'Никто не оценил данную запись'
     elif len(names) == 1:
-        return f'{names[0]} оценил(a) данную  запись'
+        return f'{names[0]} оценил(а) данную запись'
     elif len(names) == 2:
         return f'{names[0]} и {names[1]} оценили данную запись'
     elif len(names) == 3:

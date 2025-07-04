@@ -1,13 +1,9 @@
-n = 6
-d = {}
-
-l = [[input().split(',')] for i in range(n)]
-
-for i in range(len(l)):
-    for j in l[i]:
-        d[l[i][j]] = d.get(l[i][j], 0) + 1
-
-print(d)
+n = int(input())
+langs = {}
+for _ in range(n):
+    for s in input().split(', '):
+        langs[s] = langs.get(s, 0) + 1
+print(", ".join(sorted(k for k, v in langs.items() if v == n)) or "Сериал снять не удастся")
 
 
 

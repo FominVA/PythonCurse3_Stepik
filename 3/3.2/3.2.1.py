@@ -1,10 +1,7 @@
-from datetime import date
+from datetime import time
 
-date1 = date(2020, 7, 26)
-date2 = date(2020, 7, 2)
-flag = date1 < date2
-for j in range(date.toordinal(date2), date.toordinal(date1)+1):
-    a = date.fromordinal(j)
-    
-    a = a.weekday()
-    print(a)  
+alarm = time(7, 30, 25)
+
+print('Часы:', alarm.strftime('%H'))
+print('Минуты:', alarm.strftime('%M'))
+print('Секунды:', alarm.strftime('%S'))

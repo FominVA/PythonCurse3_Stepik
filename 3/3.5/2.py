@@ -1,4 +1,7 @@
 from datetime import datetime, timedelta
+import time
+print(f"Здесь мы начинаем перебирать ежемесячно...")
+t = time.perf_counter()
 pattern = '%d.%m.%Y'
 
 start = datetime.strptime('01.01.0001', pattern)
@@ -14,3 +17,4 @@ def bad_day(num):
 for num in range(7):
     bad_day(num)
 
+print(f"Более разумный перебор:  {time.perf_counter() - t} с.")

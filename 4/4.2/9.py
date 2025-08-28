@@ -7,7 +7,8 @@ with open('name_log.csv', encoding='utf-8', newline='') as file1, open ('new_nam
     
     sorted_data= sorted(reader, key=lambda x: datetime.strptime(x['dtime'], '%d/%m/%Y %H:%M'))
     result = sorted(sorted_data, key=lambda x: x['email'])
-    writer = csv.writer(file2)
-    writer.writerow(columns)
+    
+    writer = csv.DictWriter(file2, fieldnames=columns)
+    writer.writeheader()
     for row in result:
         writer.writerow(row)

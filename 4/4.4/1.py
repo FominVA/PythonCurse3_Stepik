@@ -5,4 +5,4 @@ countries = {'Monaco': 'Monaco', 'Iceland': 'Reykjavik', 'Kenya': 'Nairobi', 'Ka
              'Cuba': 'Havana', 'France': 'Paris', 'Gabon': 'Libreville', 'Liberia': 'Monrovia',
              'Angola': 'Luanda', 'India': 'New Delhi', 'Canada': 'Ottawa', 'Australia': 'Canberra'}
 
-json_countries = json.dumps
+print(json.dumps(countries, indent='   ', sort_keys=True, separators=(',', ' - ')))

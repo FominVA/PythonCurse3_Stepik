@@ -9,5 +9,5 @@ for product, profit in data:
 result = sorted(result.items())
 
 for product, profit in result:
-    print(f'{product}: ${profit} ', sep='\n')
+    print(f'{product}: ${profit}', sep='\n')
 

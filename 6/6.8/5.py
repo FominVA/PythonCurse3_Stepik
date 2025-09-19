@@ -1,8 +1,9 @@
 from sys import stdin
 from collections import Counter
 
-data = list(map(str.strip, stdin))
+grades = Counter()
 
-name = [i.split(' ') for i in data]
-
-print(name.most_common())
+for line in stdin:
+    name, grade = line.split(' ')
+    grades[name] = int(grade)
+print(grades.most_common()[-2][0])

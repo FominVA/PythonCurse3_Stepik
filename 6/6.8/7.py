@@ -1,7 +1,7 @@
 from collections import Counter
 import csv
 
-with open('name_log.csv', 'r', encoding='utf-8') as file:
+with open('./6/6.8/name_log.csv', 'r', encoding='utf-8') as file:
     rows = list(csv.reader(file))
     columns=['username','email','dtime']
     rows = rows[1:]
@@ -13,5 +13,7 @@ with open('name_log.csv', 'r', encoding='utf-8') as file:
     
     for email, count in sorted(sorted_result.items()):
         print(f'{email}: {count}')
+
+
 
   

@@ -12,3 +12,9 @@ data = Counter('aksjaskfjsklfjdslkfjajfopewtoieqpwdpqworiiqjskanvmcxbmpewrqopkqw
 
 data.__dict__['min_values'] = func_min
 data.__dict__['max_values'] = func_max
+
+data2 = Counter(['a', 'b', 'c','d'])
+data2.__dict__['min_values'] = func_min
+data2.__dict__['max_values'] = func_max
+
+print(data2.min_values())

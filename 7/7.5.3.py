@@ -13,11 +13,12 @@ class DigitError(Exception):
 
 def is_good_password(string):
     try:
-        if len(string) >= 9 and string != string.upper() and string != string.lower() and any(i.isdigit() for i in string):
-            return string
+        letters = [char for char in string if char.isalpha()]
+
+        if len(string) >= 9 and any(char.isupper() for char in letters) and any(char.islower() for char in letters) and any(i.isdigit() for i in string):
+            return True
         if len(string) < 9:
             raise LengthError()
-        letters = [char for char in string if char.isalpha()]
     
         if not letters:
             raise LetterError("Password must contain letters.")
@@ -35,5 +36,5 @@ def is_good_password(string):
 
 string = [line.strip() for line in sys.stdin]
 for i in string:
-    print(is_good_password(i))
+    is_good_password(i)
 print('Success!')

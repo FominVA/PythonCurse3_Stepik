@@ -1,5 +1,11 @@
-a, b = 10, 0
+def func(objects):
+    if isinstance(objects, list):
+        return objects[-1]
+    elif isinstance(objects, set):
+        return len(objects)
+    elif isinstance(objects, tuple):
+        return objects[0]
+    
+        
 
-expression = 'if a or b: print(a + b)'
-
-print(eval(expression))
+print(func(eval(input())))

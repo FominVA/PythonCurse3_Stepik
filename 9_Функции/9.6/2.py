@@ -1,3 +1,5 @@
-number = 13.2313
-number_s = str(number).replace('.', '')
-print(number_s)
+def top_grade(grades: dict[str, str | list[int]]) -> dict[str, str | int]:
+    students_name = grades['name']
+    max_scores = max(grades['grades'])
+    d = {'name': students_name, 'top_grade': max_scores}
+    return d

@@ -1,6 +1,9 @@
 def sandwich(func):
     def wrapper(*args, **kwargs):
-        return '---- Верхний ломтик хлеба ----' + str(func(*args, **kwargs)) + "/n" + '---- Нижний ломтик хлеба ----'
+        print('---- Верхний ломтик хлеба ----')
+        mid = func(*args, **kwargs)
+        print('---- Нижний ломтик хлеба ----')
+        return mid
     return wrapper
 
 

@@ -1,12 +1,11 @@
 import functools
 
-def add_attrs(**kwargs):
+def add_attrs(**attrs):
     def decorator(func):
-        for attr_name, attr_value in kwargs.items():
-            setattr(func, attr_name, attr_value)
-        if not hasattr(func, 'name'):
-             setattr(func, 'name', func.__name__)
-        return func
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            return func(*args, **kwargs)
+        return wrapper
     return decorator
              
 

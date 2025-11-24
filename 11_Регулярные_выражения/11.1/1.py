@@ -1,6 +1,9 @@
-import re
-regex = (r'\bcat', r'cat\b', r'\bcat\b', r'\Bcat', r'cat\B', r'\Bcat\B')
+from sys import stdin
+from re import match, search
+pattern1 = r'\d{[1-3]}'
+pattern2 = r'( -)?\d|\d{2}|\d{3}( -)?'
+pattern3 = r''
 
-s = "Some words contain the word cat: scat, ducati, alcatel, catalyst, worldcat and of course cat!"
-for pattern in regex:
-    print(len(re.findall(pattern, s)))
+num = [i for i in stdin]
+
+print(f'Код страны: {num}, Код города: 877, Номер: 2638277')
